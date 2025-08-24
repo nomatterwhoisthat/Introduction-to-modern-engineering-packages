@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test 1",
+      "run": "octave --eval \"assert(islogical(checkerboard(1)) && all(all(checkerboard(1)==1)))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 2",
+      "run": "octave --eval \"assert(islogical(checkerboard(2)) && all(all(checkerboard(2)==[1 0;0 1])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 3",
+      "run": "octave --eval \"assert(islogical(checkerboard(2,2)) && all(all(checkerboard(2,2)==[1 0;0 1])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 4",
+      "run": "octave --eval \"assert(islogical(checkerboard(2,3)) && all(all(checkerboard(2,3)==[1 0 1;0 1 0])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 5",
+      "run": "octave --eval \"assert(islogical(checkerboard(4,3)) && all(all(checkerboard(4,3)==[1 0 1;0 1 0;1 0 1;0 1 0])))\"",
+      "timeout": 1,
+      "points": 1
+    }
+    ]
+}

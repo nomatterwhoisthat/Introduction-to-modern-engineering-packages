@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "name": "Test 1",
+      "run": "octave --eval \"assert(all(all(mirrorm(1,1)==ones(3))))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 2",
+      "run": "octave --eval \"assert(all(all(mirrorm([2 1],1)==[2 2 1 1;2 2 1 1;2 2 1 1])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 3",
+      "run": "octave --eval \"assert(all(all(mirrorm([2;1],1)==[2 2 2;2 2 2; 1 1 1;1 1 1])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 4",
+      "run": "octave --eval \"assert(all(all(mirrorm(zeros(2),2)==zeros(6))))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 5",
+      "run": "octave --eval \"assert(all(all(mirrorm(eye(3),3)==[1,0,0,0,0,1,1,0,0;0,1,0,0,1,0,0,1,0;0,0,1,1,0,0,0,0,1;0,0,1,1,0,0,0,0,1;0,1,0,0,1,0,0,1,0;1,0,0,0,0,1,1,0,0;1,0,0,0,0,1,1,0,0;0,1,0,0,1,0,0,1,0;0,0,1,1,0,0,0,0,1])))\"",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 6",
+      "run": "octave --eval \"assert(all(all(mirrorm([1 2 3 4;5 6 7 8;9 8 7 6],2) == [6 2 5 6 7 8 3 7;5 1 1 2 3 4 4 8;2 1 1 2 3 4 4 3;6 5 5 6 7 8 8 7;8 9 9 8 7 6 6 7;5 9 9 8 7 6 6 8;6 8 5 6 7 8 7 7])))\"",
+      "timeout": 1,
+      "points": 1
+    }
+    ]
+}

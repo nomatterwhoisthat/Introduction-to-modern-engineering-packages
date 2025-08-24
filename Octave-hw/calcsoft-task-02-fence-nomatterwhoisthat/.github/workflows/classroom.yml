@@ -1,0 +1,17 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  grade:
+    runs-on: octave
+    name: Autograding
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v3
+      - uses: education/autograding@v1
